@@ -43,3 +43,6 @@ nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem
 .site-footer p{margin:.5rem 0}
 @media (min-width:48rem){body{font-size:1.3rem}h1{font-size:2.6rem}.cols{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.tstep{background:#fff;border-radius:12px;padding:1rem 1.25rem;margin:1rem 0;border:2px solid var(--green)}
+.tstep h3{font-size:1.5rem;margin:.25rem 0 .75rem}
+.tstep-img{display:block;width:100%;max-width:390px;height:auto;border:1px solid #ccc;border-radius:12px;margin:.5rem 0}
