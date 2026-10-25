@@ -47,3 +47,19 @@ nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem
 .tstep{background:#fff;border-radius:12px;padding:1rem 1.25rem;margin:1rem 0;border:2px solid var(--green)}
 .tstep h3{font-size:1.5rem;margin:.25rem 0 .75rem}
 .tstep-img{display:block;width:100%;max-width:390px;height:auto;border:1px solid #ccc;border-radius:12px;margin:.5rem 0}
+.badge{display:inline-block;vertical-align:middle;font-size:1rem;font-weight:700;padding:.2rem .7rem;border-radius:999px;background:var(--green);color:#fff;margin-left:.4rem}
+.badge-soon{background:#fff;color:var(--green-dark);border:2px solid var(--green)}
+.app-card .app-icon{margin-bottom:.5rem}
+.app-choice{display:grid;gap:1rem;margin:1.5rem 0}
+.app-choice .btn-big{max-width:none}
+section[id]{scroll-margin-top:1rem}
+.contact{font-size:1.3rem;margin:1.5rem 0}
+.site-footer .contact{font-size:inherit;margin:.5rem 0}
+.signup label{display:block;font-weight:700;margin:.5rem 0 .25rem}
+.signup input[type=email]{width:100%;max-width:26rem;min-height:56px;font-size:1.3rem;padding:.5rem .8rem;border:3px solid var(--green);border-radius:12px;margin-bottom:1rem}
+.choices{display:grid;gap:1.25rem;margin:1.5rem 0}
+.choice{background:var(--green-pale);border-radius:16px;padding:1rem 1.25rem}
+.choice p{margin:.5rem 0 0}
+.choice .btn-big{max-width:none}
+.news{list-style:none;padding:0}
+.news li{border-left:8px solid var(--green);background:var(--green-pale);border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}

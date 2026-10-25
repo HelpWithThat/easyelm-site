@@ -3,14 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Proximity Reminders: never forget the thing you went out for</title>
+<title>Proximity Reminders: reminders at the right place</title>
 <meta name="description" content="Location reminders that go off when you drive by or arrive at your favorite places.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Easy Elm">
 <meta property="og:url" content="https://www.easyelm.com/reminders/">
-<meta property="og:title" content="Proximity Reminders">
-<meta property="og:description" content="Never forget the thing you went out for.">
-<meta property="og:image" content="https://www.easyelm.com/reminders/icon.png">
+<meta property="og:title" content="Proximity Reminders: reminders at the right place">
+<meta property="og:description" content="Location reminders that go off when you drive by or arrive at your favorite places.">
+<meta property="og:image" content="https://www.easyelm.com/og-easyelm.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Easy Elm logo: a green leaf in a white rounded square on green">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proximity Reminders: reminders at the right place">
+<meta name="twitter:description" content="Location reminders that go off when you drive by or arrive at your favorite places.">
+<meta name="twitter:image" content="https://www.easyelm.com/og-easyelm.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -28,50 +35,60 @@
 
 <section class="hero">
   <img class="app-icon" src="/reminders/icon.png" width="120" height="120" alt="Proximity Reminders app icon">
-  <h1>Proximity Reminders</h1>
+  <h1>Proximity Reminders <span class="badge">Testing</span></h1>
   <p class="lead">Never forget the thing you went out for.</p>
-  <p>Location reminders that go off when you drive by or arrive at favorite places!</p>
 </section>
 <section>
-  <h2>We all do it</h2>
+  <h2>What it does</h2>
+  <p>Location reminders that go off when you drive by or arrive at favorite places.</p>
   <p>You get home from the store and realize you forgot the one thing you needed. Proximity Reminders fixes that by reminding you at the right place, right when it matters.</p>
-</section>
-<section>
-  <h2>How it works</h2>
-  <ul class="ticks">
-    <li>Share any place from Google Maps straight into the app.</li>
-    <li>Add what you need there, like milk, stamps, or a prescription pickup.</li>
-    <li>Get a reminder when you arrive, or even when you&rsquo;re just driving by.</li>
-  </ul>
-</section>
-<section>
-  <h2>Lists that reset themselves</h2>
   <p>Some lists come back again and again. Set a list to reset every day, on the days you pick, every few weeks or months, or whenever you tap Reset.</p>
 </section>
 <section>
-  <h2>Simple for everyone</h2>
-  <ul class="ticks">
-    <li>Big, easy buttons that are clear at a glance.</li>
-    <li>12 color themes to make it yours.</li>
-    <li>Designed to be easy for all ages.</li>
-  </ul>
+  <h2>How it works, in 3 steps</h2>
+  <ol class="steps">
+    <li>Share any place from Google Maps straight into the app.</li>
+    <li>Add what you need there, like milk, stamps, or a prescription pickup.</li>
+    <li>Get a reminder when you arrive, or even when you&rsquo;re just driving by.</li>
+  </ol>
 </section>
 <section>
-  <h2>Great for</h2>
+  <h2>Who it&rsquo;s for</h2>
+  <p>Designed to be easy for all ages, with big, easy buttons that are clear at a glance and 12 color themes to make it yours. Great for:</p>
   <ul class="ticks">
     <li>Grocery and hardware store runs</li>
     <li>Picking up prescriptions</li>
     <li>Dropping off mail or returns</li>
     <li>Anything you keep forgetting on the way</li>
   </ul>
-  <p>Questions or ideas? Email <a href="mailto:support@easyelm.com">support@easyelm.com</a>. We read every message.</p>
-  <p class="callout">Coming soon to Google Play.</p>
 </section>
+<section>
+  <h2>Get it</h2>
+  <p class="callout">Proximity Reminders is in testing. It is coming soon to Google Play.</p>
+  <a class="btn btn-big" href="mailto:support@easyelm.com?subject=Proximity%20Reminders%20testing">Ask to try it</a>
+</section>
+<section>
+  <h2>Help and privacy</h2>
+  <p><a class="btn" href="/support/#reminders">Proximity Reminders help</a></p>
+  <p><a class="btn" href="/privacy/reminders/">Proximity Reminders privacy policy</a></p>
+</section>
+<section id="signup" class="card signup" aria-labelledby="signup-h" hidden style="display:none">
+  <h2 id="signup-h">Be the first to know</h2>
+  <p>Get a short email when a new Easy Elm app is ready to try. No spam, and you can leave anytime.</p>
+  <!-- TODO(Brevo): wire this form to the Brevo backend, then remove the hidden attribute and style="display:none". -->
+  <form id="signup-form" class="signup-form" hidden style="display:none" onsubmit="return false" novalidate>
+    <label for="signup-email">Your email</label>
+    <input id="signup-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+    <input type="hidden" name="app" value="reminders">
+    <button class="btn btn-big" type="submit" disabled>Keep me posted</button>
+  </form>
+</section>
+<p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Footer"><ul><li><a href="/">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/" aria-current="page">Proximity Reminders</a></li><li><a href="/intercom/">Easy Elm Intercom</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
-    <p>Questions? Email <a href="mailto:support@easyelm.com">support@easyelm.com</a></p>
+    <nav aria-label="Footer"><ul><li><a href="/">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/" aria-current="page">Proximity Reminders</a></li><li><a href="/intercom/">Easy Elm Intercom</a></li><li><a href="/news/">What&rsquo;s new</a></li><li><a href="/contact/">Talk with us</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
+    <p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
     <p>&copy; 2026 Easy Elm</p>
   </div>
 </footer>

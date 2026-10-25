@@ -3,14 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Easy Elm Intercom: push-to-talk for your home or workplace</title>
+<title>Easy Elm Intercom: hold a name and talk</title>
 <meta name="description" content="A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Easy Elm">
 <meta property="og:url" content="https://www.easyelm.com/intercom/">
-<meta property="og:title" content="Easy Elm Intercom">
-<meta property="og:description" content="Hold a name and talk.">
-<meta property="og:image" content="https://www.easyelm.com/intercom/icon.png">
+<meta property="og:title" content="Easy Elm Intercom: hold a name and talk">
+<meta property="og:description" content="A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.">
+<meta property="og:image" content="https://www.easyelm.com/og-easyelm.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Easy Elm logo: a green leaf in a white rounded square on green">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Easy Elm Intercom: hold a name and talk">
+<meta name="twitter:description" content="A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.">
+<meta name="twitter:image" content="https://www.easyelm.com/og-easyelm.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -28,28 +35,33 @@
 
 <section class="hero">
   <img class="app-icon" src="/intercom/icon.png" width="120" height="120" alt="Easy Elm Intercom app icon: a microphone with a PUSH button">
-  <h1>Easy Elm Intercom</h1>
+  <h1>Easy Elm Intercom <span class="badge badge-soon">Coming soon</span></h1>
   <p class="lead">Hold a name and talk.</p>
+</section>
+<section>
+  <h2>What it does</h2>
   <p>A push-to-talk intercom for the phones in your home or workplace.</p>
-</section>
-<section>
-  <h2>How it works</h2>
-  <ul class="ticks">
-    <li>Put the app on each phone and give each one a name.</li>
-    <li>Phones on the same Wi-Fi find each other on their own.</li>
-    <li>Hold someone's button to talk, and let go to stop. Or hold Everyone.</li>
-    <li>You hear people calling you even when your screen is off.</li>
-  </ul>
-</section>
-<section>
-  <h2>Private and simple</h2>
   <ul class="ticks">
     <li>No account, no sign-up, and no ads.</li>
     <li>Works over your own Wi-Fi, with no internet needed.</li>
     <li>Voices are encrypted between your phones.</li>
-    <li>Big buttons and clear lights, easy for all ages.</li>
+    <li>You hear people calling you even when your screen is off.</li>
   </ul>
-  <p>Questions or ideas? Email <a href="mailto:support@easyelm.com">support@easyelm.com</a>. We read every message.</p>
+</section>
+<section>
+  <h2>How it works, in 3 steps</h2>
+  <ol class="steps">
+    <li>Put the app on each phone and give each one a name.</li>
+    <li>Phones on the same Wi-Fi find each other on their own.</li>
+    <li>Hold someone&rsquo;s button to talk, and let go to stop. Or hold Everyone.</li>
+  </ol>
+</section>
+<section>
+  <h2>Who it&rsquo;s for</h2>
+  <p>Anyone who wants to talk between phones in one home or workplace, on one Wi-Fi. Big buttons and clear lights make it easy for all ages.</p>
+</section>
+<section>
+  <h2>Get it</h2>
   <p class="callout">Coming soon to Google Play.</p>
 </section>
 <section>
@@ -82,11 +94,28 @@
     </div>
   </div>
 </section>
+<section>
+  <h2>Help and privacy</h2>
+  <p><a class="btn" href="/support/#intercom">Easy Elm Intercom help</a></p>
+  <p><a class="btn" href="/privacy/intercom/">Easy Elm Intercom privacy policy</a></p>
+</section>
+<section id="signup" class="card signup" aria-labelledby="signup-h" hidden style="display:none">
+  <h2 id="signup-h">Be the first to know</h2>
+  <p>Get a short email when a new Easy Elm app is ready to try. No spam, and you can leave anytime.</p>
+  <!-- TODO(Brevo): wire this form to the Brevo backend, then remove the hidden attribute and style="display:none". -->
+  <form id="signup-form" class="signup-form" hidden style="display:none" onsubmit="return false" novalidate>
+    <label for="signup-email">Your email</label>
+    <input id="signup-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+    <input type="hidden" name="app" value="intercom">
+    <button class="btn btn-big" type="submit" disabled>Keep me posted</button>
+  </form>
+</section>
+<p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Footer"><ul><li><a href="/">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/">Proximity Reminders</a></li><li><a href="/intercom/" aria-current="page">Easy Elm Intercom</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
-    <p>Questions? Email <a href="mailto:support@easyelm.com">support@easyelm.com</a></p>
+    <nav aria-label="Footer"><ul><li><a href="/">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/">Proximity Reminders</a></li><li><a href="/intercom/" aria-current="page">Easy Elm Intercom</a></li><li><a href="/news/">What&rsquo;s new</a></li><li><a href="/contact/">Talk with us</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
+    <p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
     <p>&copy; 2026 Easy Elm</p>
   </div>
 </footer>

@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support: Easy Elm Remote help</title>
-<meta name="description" content="Help setting up Easy Elm Remote, fixing Bluetooth problems, and managing your subscription.">
+<title>Support: Easy Elm</title>
+<meta name="description" content="Help for Easy Elm Remote, Proximity Reminders and Easy Elm Intercom.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Easy Elm">
 <meta property="og:url" content="https://www.easyelm.com/support/">
-<meta property="og:title" content="Support: Easy Elm Remote help">
-<meta property="og:description" content="Help setting up Easy Elm Remote, fixing Bluetooth problems, and managing your subscription.">
+<meta property="og:title" content="Support: Easy Elm">
+<meta property="og:description" content="Help for Easy Elm Remote, Proximity Reminders and Easy Elm Intercom.">
 <meta property="og:image" content="https://www.easyelm.com/og-easyelm.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Easy Elm logo: a green leaf in a white rounded square on green">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Support: Easy Elm Remote help">
-<meta name="twitter:description" content="Help setting up Easy Elm Remote, fixing Bluetooth problems, and managing your subscription.">
+<meta name="twitter:title" content="Support: Easy Elm">
+<meta name="twitter:description" content="Help for Easy Elm Remote, Proximity Reminders and Easy Elm Intercom.">
 <meta name="twitter:image" content="https://www.easyelm.com/og-easyelm.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -34,9 +34,16 @@
 <main id="main" class="wrap">
 
 <h1>Support</h1>
-<p class="lead">We&rsquo;re happy to help. Here are answers to the most common questions.</p>
+<p class="lead">We&rsquo;re happy to help. Which app do you need help with?</p>
+<nav class="app-choice" aria-label="Which app?">
+  <a class="btn btn-big" href="#remote">Easy Elm Remote</a>
+  <a class="btn btn-big" href="#reminders">Proximity Reminders</a>
+  <a class="btn btn-big" href="#intercom">Easy Elm Intercom</a>
+</nav>
+<section id="remote">
+  <h2>Easy Elm Remote help</h2>
 <section>
-  <h2>Pair your phone with your computer</h2>
+  <h3>Pair your phone with your computer</h3>
   <ol class="steps">
     <li>Make sure Bluetooth is on, on both your phone and your computer.</li>
     <li>Open Easy Elm Remote on your phone and tap <em>Make phone discoverable</em>. Your phone stays visible for 2 minutes.</li>
@@ -47,7 +54,7 @@
   <p>Next time, just open the app. It connects to your computer by itself. If not, tap your computer&rsquo;s name in the app.</p>
 </section>
 <section class="callout">
-  <h2>Windows tip: something stopped working</h2>
+  <h3>Windows tip: something stopped working</h3>
   <p>If something stops working after a Windows update (for example, the volume buttons), remove and re-pair:</p>
   <ol class="steps">
     <li>On your computer, open <strong>Settings &gt; Bluetooth &amp; devices</strong>.</li>
@@ -56,7 +63,7 @@
   </ol>
 </section>
 <section>
-  <h2>Cancel a monthly plan</h2>
+  <h3>Cancel a monthly plan</h3>
   <p>Monthly Pro plans are handled by Google Play. To cancel:</p>
   <ol class="steps">
     <li>Open the <strong>Play Store</strong> app.</li>
@@ -65,16 +72,52 @@
     <li>Choose <strong>Easy Elm Remote</strong> and tap <strong>Cancel subscription</strong>.</li>
   </ol>
 </section>
+</section>
+<section id="reminders">
+  <h2>Proximity Reminders help</h2>
+  <h3>Add a reminder</h3>
+  <ol class="steps">
+    <li>In Google Maps, find the place and tap <strong>Share</strong>.</li>
+    <li>Choose <strong>Proximity Reminders</strong>.</li>
+    <li>Add what you need there, like milk, stamps, or a prescription pickup.</li>
+  </ol>
+  <p>You get a reminder when you arrive, or even when you&rsquo;re just driving by.</p>
+  <h3>Lists that come back</h3>
+  <p>Set a list to reset every day, on the days you pick, every few weeks or months, or whenever you tap <strong>Reset</strong>.</p>
+</section>
+<section id="intercom">
+  <h2>Easy Elm Intercom help</h2>
+  <h3>Get started</h3>
+  <ol class="steps">
+    <li>Put the app on each phone and give each one a name.</li>
+    <li>Make sure all the phones are on the same Wi-Fi. They find each other on their own.</li>
+    <li>Hold someone&rsquo;s button to talk, and let go to stop. Or hold <strong>Everyone</strong>.</li>
+  </ol>
+  <h3>Can&rsquo;t see another phone?</h3>
+  <p>Check that both phones are on the same Wi-Fi.</p>
+</section>
 <section>
   <h2>Still stuck? Email us</h2>
-  <p>Tell us your phone model and what&rsquo;s happening, and we&rsquo;ll write back.</p>
-  <a class="btn btn-big" href="mailto:support@easyelm.com">Email support@easyelm.com</a>
+  <p>Tell us which app, your phone model and what&rsquo;s happening, and we&rsquo;ll write back.</p>
+  <a class="btn btn-big" href="mailto:support@easyelm.com">Email us</a>
 </section>
+<section id="signup" class="card signup" aria-labelledby="signup-h" hidden style="display:none">
+  <h2 id="signup-h">Be the first to know</h2>
+  <p>Get a short email when a new Easy Elm app is ready to try. No spam, and you can leave anytime.</p>
+  <!-- TODO(Brevo): wire this form to the Brevo backend, then remove the hidden attribute and style="display:none". -->
+  <form id="signup-form" class="signup-form" hidden style="display:none" onsubmit="return false" novalidate>
+    <label for="signup-email">Your email</label>
+    <input id="signup-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+    <input type="hidden" name="app" value="general">
+    <button class="btn btn-big" type="submit" disabled>Keep me posted</button>
+  </form>
+</section>
+<p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Footer"><ul><li><a href="/">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/">Proximity Reminders</a></li><li><a href="/intercom/">Easy Elm Intercom</a></li><li><a href="/support/" aria-current="page">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
-    <p>Questions? Email <a href="mailto:support@easyelm.com">support@easyelm.com</a></p>
+    <nav aria-label="Footer"><ul><li><a href="/">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/">Proximity Reminders</a></li><li><a href="/intercom/">Easy Elm Intercom</a></li><li><a href="/news/">What&rsquo;s new</a></li><li><a href="/contact/">Talk with us</a></li><li><a href="/support/" aria-current="page">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
+    <p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
     <p>&copy; 2026 Easy Elm</p>
   </div>
 </footer>

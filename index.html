@@ -36,35 +36,24 @@
 <section class="hero">
   <h1>Simple, friendly apps that take the stress out of tech.</h1>
   <p class="lead">Easy Elm is a small app company. We make apps with big buttons, clear words, and no clutter or ads, so they are easy for everyone to use.</p>
-  <a class="btn btn-big" href="https://play.google.com/store/apps/details?id=com.easyelm.remote">Meet Easy Elm Remote</a>
-  <p class="note">Coming soon to Google Play.</p>
 </section>
-<section class="card tester">
-  <h2>Become a tester</h2>
-  <p>Testers get the full app free while it&rsquo;s in testing.</p>
-  <ol class="steps">
-    <li><strong>Join the tester group.</strong><br><a class="btn btn-big" href="https://groups.google.com/g/EasyElmRemote">Join the tester group</a></li>
-    <li><strong>Install the app</strong> using the same Google account.<br><a class="btn btn-big" href="https://play.google.com/apps/internaltest/4701508214579644160">Install Easy Elm Remote</a></li>
-  </ol>
-</section>
-<section class="card">
+<section class="card app-card">
   <img class="app-icon" src="/assets/logo-160.png" width="96" height="96" alt="Easy Elm Remote app icon: a white laptop and keyboard on green">
-  <h2>Easy Elm Remote</h2>
-  <p>Easy Elm Remote turns your Android phone or tablet into a Bluetooth mouse, keyboard, mic and volume control for your computer. It connects over Bluetooth, so there is nothing to plug in.</p>
-  <p><a href="/remote/">Learn about Easy Elm Remote</a></p>
+  <h2>Easy Elm Remote <span class="badge">Testing</span></h2>
+  <p>Use your Android phone as a mouse and keyboard for your computer.</p>
+  <a class="btn btn-big" href="/remote/">See Easy Elm Remote</a>
 </section>
-<section class="card">
+<section class="card app-card">
   <img class="app-icon" src="/reminders/icon.png" width="96" height="96" alt="Proximity Reminders app icon">
-  <h2>Proximity Reminders</h2>
-  <p>Location reminders that go off when you drive by or arrive at your favorite places.</p>
-  <p><a href="/reminders/">Learn about Proximity Reminders</a></p>
+  <h2>Proximity Reminders <span class="badge">Testing</span></h2>
+  <p>Reminders that go off when you arrive at, or drive by, your favorite places.</p>
+  <a class="btn btn-big" href="/reminders/">See Proximity Reminders</a>
 </section>
-<section class="card">
+<section class="card app-card">
   <img class="app-icon" src="/intercom/icon.png" width="96" height="96" alt="Easy Elm Intercom app icon: a microphone with a PUSH button">
-  <h2>Easy Elm Intercom</h2>
-  <p>A push-to-talk intercom for the phones in your home or workplace. Hold a name and talk, over your own Wi-Fi.</p>
-  <p class="callout">Coming soon to Google Play.</p>
-  <p><a href="/intercom/">Learn about Easy Elm Intercom</a></p>
+  <h2>Easy Elm Intercom <span class="badge badge-soon">Coming soon</span></h2>
+  <p>A push-to-talk intercom for the phones in your home or workplace.</p>
+  <a class="btn btn-big" href="/intercom/">See Easy Elm Intercom</a>
 </section>
 <section>
   <h2>What we believe</h2>
@@ -75,11 +64,23 @@
     <li>Real help from a real person when you need it.</li>
   </ul>
 </section>
+<section id="signup" class="card signup" aria-labelledby="signup-h" hidden style="display:none">
+  <h2 id="signup-h">Be the first to know</h2>
+  <p>Get a short email when a new Easy Elm app is ready to try. No spam, and you can leave anytime.</p>
+  <!-- TODO(Brevo): wire this form to the Brevo backend, then remove the hidden attribute and style="display:none". -->
+  <form id="signup-form" class="signup-form" hidden style="display:none" onsubmit="return false" novalidate>
+    <label for="signup-email">Your email</label>
+    <input id="signup-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+    <input type="hidden" name="app" value="general">
+    <button class="btn btn-big" type="submit" disabled>Keep me posted</button>
+  </form>
+</section>
+<p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Footer"><ul><li><a href="/" aria-current="page">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/">Proximity Reminders</a></li><li><a href="/intercom/">Easy Elm Intercom</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
-    <p>Questions? Email <a href="mailto:support@easyelm.com">support@easyelm.com</a></p>
+    <nav aria-label="Footer"><ul><li><a href="/" aria-current="page">Home</a></li><li><a href="/remote/">Easy Elm Remote</a></li><li><a href="/reminders/">Proximity Reminders</a></li><li><a href="/intercom/">Easy Elm Intercom</a></li><li><a href="/news/">What&rsquo;s new</a></li><li><a href="/contact/">Talk with us</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy</a></li></ul></nav>
+    <p class="contact">Questions? We&rsquo;d love to hear from you. <a href="mailto:support@easyelm.com">support@easyelm.com</a> or <a href="/contact/">talk with us</a>.</p>
     <p>&copy; 2026 Easy Elm</p>
   </div>
 </footer>
