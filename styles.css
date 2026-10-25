@@ -65,4 +65,4 @@ section[id]{scroll-margin-top:1rem}
 .news li{border-left:8px solid var(--green);background:var(--green-pale);border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
 .talk-card .btn-big{margin-top:.5rem}
 
-a.badge{text-decoration:none;color:inherit;cursor:pointer}
+a.badge{text-decoration:none;color:#fff;cursor:pointer}
