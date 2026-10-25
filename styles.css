@@ -66,3 +66,11 @@ section[id]{scroll-margin-top:1rem}
 .talk-card .btn-big{margin-top:.5rem}
 
 a.badge{text-decoration:none;color:#fff;cursor:pointer}
+
+/* Screenshots */
+.shots{display:grid;grid-template-columns:1fr;gap:2rem;margin:1.5rem 0}
+.shot{margin:0;text-align:center}
+.shot img{display:block;width:100%;height:auto;max-height:70vh;object-fit:contain;margin:0 auto;border-radius:16px;border:1px solid rgba(0,0,0,.15);box-shadow:0 4px 14px rgba(0,0,0,.12);background:#16131d}
+.shot figcaption{font-size:1.3rem;line-height:1.4;margin-top:.9rem;font-weight:600}
+.shot-step{display:block;font-size:1rem;text-transform:uppercase;letter-spacing:.05em;opacity:.75;margin-bottom:.2rem}
+@media (min-width:760px){.shots-2{grid-template-columns:1fr 1fr;align-items:start}.shot img{max-height:560px}}
