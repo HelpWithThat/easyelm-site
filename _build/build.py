@@ -100,9 +100,10 @@ APP_DATA = [
 ]
 def card(a):
     cls = "badge" if a["status"] == "Testing" else "badge badge-soon"
+    badge = f'<a class="{cls}" href="/{a['slug']}/#test">{a['status']}</a>' if a["status"] == "Testing" else f'<span class="{cls}">{a['status']}</span>'
     return f'''<section class="card app-card">
   <img class="app-icon" src="{a['icon']}" width="96" height="96" alt="{a['alt']}">
-  <h2>{a['name']} <span class="{cls}">{a['status']}</span></h2>
+  <h2>{a['name']} {badge}</h2>
   <p>{a['description']}</p>
   <a class="btn btn-big" href="/{a['slug']}/">See {a['name']}</a>
 </section>'''
