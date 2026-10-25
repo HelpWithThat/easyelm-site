@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Easy Elm Remote",
+    "slug": "remote",
+    "description": "Use your Android phone as a mouse and keyboard for your computer.",
+    "status": "Testing",
+    "page": "https://www.easyelm.com/remote/",
+    "icon": "https://www.easyelm.com/assets/logo-160.png"
+  },
+  {
+    "name": "Proximity Reminders",
+    "slug": "reminders",
+    "description": "Reminders that go off when you arrive at, or drive by, your favorite places.",
+    "status": "Coming soon",
+    "page": "https://www.easyelm.com/reminders/",
+    "icon": "https://www.easyelm.com/reminders/icon.png"
+  },
+  {
+    "name": "Easy Elm Intercom",
+    "slug": "intercom",
+    "description": "A push-to-talk intercom for the phones in your home or workplace.",
+    "status": "Coming soon",
+    "page": "https://www.easyelm.com/intercom/",
+    "icon": "https://www.easyelm.com/intercom/icon.png"
+  }
+]

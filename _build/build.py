@@ -90,7 +90,26 @@ def read(name):
     return open(os.path.join(ROOT, "_build", "content", name)).read()
 
 C = lambda n: read(n)
-page("index.html","Easy Elm: simple, friendly apps","Easy Elm makes simple, friendly apps that take the stress out of tech.","/",C("home.html"))
+
+# Single source for the home cards and /apps.json.
+SITE = "https://www.easyelm.com"
+APP_DATA = [
+    dict(name="Easy Elm Remote", slug="remote", description="Use your Android phone as a mouse and keyboard for your computer.", status="Testing", icon="/assets/logo-160.png", alt="Easy Elm Remote app icon: a white laptop and keyboard on green"),
+    dict(name="Proximity Reminders", slug="reminders", description="Reminders that go off when you arrive at, or drive by, your favorite places.", status="Coming soon", icon="/reminders/icon.png", alt="Proximity Reminders app icon"),
+    dict(name="Easy Elm Intercom", slug="intercom", description="A push-to-talk intercom for the phones in your home or workplace.", status="Coming soon", icon="/intercom/icon.png", alt="Easy Elm Intercom app icon: a microphone with a PUSH button"),
+]
+def card(a):
+    cls = "badge" if a["status"] == "Testing" else "badge badge-soon"
+    return f'''<section class="card app-card">
+  <img class="app-icon" src="{a['icon']}" width="96" height="96" alt="{a['alt']}">
+  <h2>{a['name']} <span class="{cls}">{a['status']}</span></h2>
+  <p>{a['description']}</p>
+  <a class="btn btn-big" href="/{a['slug']}/">See {a['name']}</a>
+</section>'''
+import json
+json.dump([dict(name=a["name"], slug=a["slug"], description=a["description"], status=a["status"], page=f"{SITE}/{a['slug']}/", icon=SITE + a["icon"]) for a in APP_DATA],
+          open(os.path.join(ROOT, "apps.json"), "w"), indent=2, ensure_ascii=False)
+page("index.html","Easy Elm: simple, friendly apps","Easy Elm makes simple, friendly apps that take the stress out of tech.","/",C("home.html").replace("{{APP_CARDS}}", "\n".join(card(a) for a in APP_DATA)))
 page("remote/index.html","Easy Elm Remote: your phone as a mouse and keyboard","Easy Elm Remote turns your Android phone or tablet into a wireless Bluetooth mouse, keyboard, mic and volume control for your Windows PC, laptop, or Android tablet.","/remote/",C("remote.html"),app="remote",og="og-remote.png",ogalt="Easy Elm Remote app icon: a white laptop and keyboard on green")
 page("reminders/index.html","Proximity Reminders: reminders at the right place","Location reminders that go off when you drive by or arrive at your favorite places.","/reminders/",C("reminders.html"),app="reminders")
 page("intercom/index.html","Easy Elm Intercom: hold a name and talk","A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.","/intercom/",C("intercom.html"),app="intercom")

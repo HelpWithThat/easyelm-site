@@ -63,3 +63,4 @@ section[id]{scroll-margin-top:1rem}
 .choice .btn-big{max-width:none}
 .news{list-style:none;padding:0}
 .news li{border-left:8px solid var(--green);background:var(--green-pale);border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+.talk-card .btn-big{margin-top:.5rem}
