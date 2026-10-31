@@ -74,6 +74,7 @@ def footer(here, app="general"):
   <div class="wrap">
     <nav aria-label="Footer"><ul>{items}</ul></nav>
     {CONTACT}
+    <p class="slogan">Easy Elm. Helpful apps that stay out of your way.</p>
     <p>&copy; 2026 Easy Elm</p>
   </div>
 </footer>
@@ -110,7 +111,7 @@ def card(a):
 import json
 json.dump([dict(name=a["name"], slug=a["slug"], description=a["description"], status=a["status"], page=f"{SITE}/{a['slug']}/", icon=SITE + a["icon"]) for a in APP_DATA],
           open(os.path.join(ROOT, "apps.json"), "w"), indent=2, ensure_ascii=False)
-page("index.html","Easy Elm: simple, friendly apps","Easy Elm makes simple, friendly apps that take the stress out of tech.","/",C("home.html").replace("{{APP_CARDS}}", "\n".join(card(a) for a in APP_DATA)))
+page("index.html","Easy Elm. Helpful apps that stay out of your way.","Easy Elm. Helpful apps that stay out of your way.","/",C("home.html").replace("{{APP_CARDS}}", "\n".join(card(a) for a in APP_DATA)))
 page("remote/index.html","Easy Elm Remote: your phone as a mouse and keyboard","Easy Elm Remote turns your Android phone or tablet into a wireless Bluetooth mouse, keyboard, mic and volume control for your Windows PC, laptop, or Android tablet.","/remote/",C("remote.html"),app="remote",og="og-remote.png",ogalt="Easy Elm Remote app icon: a white laptop and keyboard on green")
 page("reminders/index.html","Proximity Reminders: reminders at the right place","Location reminders that go off when you drive by or arrive at your favorite places.","/reminders/",C("reminders.html"),app="reminders")
 page("intercom/index.html","Easy Elm Intercom: hold a name and talk","A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.","/intercom/",C("intercom.html"),app="intercom")
