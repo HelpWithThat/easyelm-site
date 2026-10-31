@@ -74,7 +74,7 @@ def footer(here, app="general"):
   <div class="wrap">
     <nav aria-label="Footer"><ul>{items}</ul></nav>
     {CONTACT}
-    <p class="slogan">Easy Elm. Helpful apps that stay out of your way.</p>
+    <p class="slogan"><span class="slogan-brand">Easy Elm.</span> Helpful apps that stay out of your way.</p>
     <p>&copy; 2026 Easy Elm</p>
   </div>
 </footer>
