@@ -114,7 +114,7 @@ json.dump([dict(name=a["name"], slug=a["slug"], description=a["description"], st
 page("index.html","Easy Elm. Helpful apps that stay out of your way.","Easy Elm. Helpful apps that stay out of your way.","/",C("home.html").replace("{{APP_CARDS}}", "\n".join(card(a) for a in APP_DATA)))
 page("remote/index.html","Phone Mouse by Easy Elm: your phone as a mouse and keyboard","Phone Mouse by Easy Elm turns your Android phone or tablet into a wireless Bluetooth mouse, keyboard, mic and volume control for your Windows PC, laptop, or Android tablet.","/remote/",C("remote.html"),app="remote",og="og-remote.png",ogalt="Phone Mouse by Easy Elm app icon: a white laptop and keyboard on green")
 page("reminders/index.html","Store Reminder by Easy Elm: reminders at the right place","Location reminders that go off when you drive by or arrive at your favorite places.","/reminders/",C("reminders.html"),app="reminders")
-page("intercom/index.html","Phone Intercom by Easy Elm: hold a name and talk","A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.","/intercom/",C("intercom.html"),app="intercom")
+page("intercom/index.html","Phone Intercom by Easy Elm: hold a name and talk","A push-to-talk intercom for the phones in your home or workplace. Works over Wi-Fi or mobile data.","/intercom/",C("intercom.html"),app="intercom")
 page("support/index.html","Support: Easy Elm","Help for Phone Mouse by Easy Elm, Store Reminder by Easy Elm and Phone Intercom by Easy Elm.","/support/",C("support.html"))
 def demote(h):
     return h.replace("<h2","<h3").replace("</h2>","</h3>").replace("<h1","<h2").replace("</h1>","</h2>")
