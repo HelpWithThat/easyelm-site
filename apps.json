@@ -1,6 +1,6 @@
 [
   {
-    "name": "Easy Elm Remote",
+    "name": "Phone Mouse by Easy Elm",
     "slug": "remote",
     "description": "Use your Android phone as a mouse and keyboard for your computer.",
     "status": "Testing",
@@ -8,7 +8,7 @@
     "icon": "https://www.easyelm.com/assets/logo-160.png"
   },
   {
-    "name": "Proximity Reminders",
+    "name": "Store Reminder by Easy Elm",
     "slug": "reminders",
     "description": "Reminders that go off when you arrive at, or drive by, your favorite places.",
     "status": "Coming soon",
@@ -16,7 +16,7 @@
     "icon": "https://www.easyelm.com/reminders/icon.png"
   },
   {
-    "name": "Easy Elm Intercom",
+    "name": "Phone Intercom by Easy Elm",
     "slug": "intercom",
     "description": "A push-to-talk intercom for the phones in your home or workplace.",
     "status": "Coming soon",

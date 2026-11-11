@@ -2,7 +2,7 @@
 """Generates every page from shared header/footer. Run: python3 _build/build.py"""
 import os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-APPS = [("remote","Easy Elm Remote"),("reminders","Proximity Reminders"),("intercom","Easy Elm Intercom")]
+APPS = [("remote","Phone Mouse by Easy Elm"),("reminders","Store Reminder by Easy Elm"),("intercom","Phone Intercom by Easy Elm")]
 
 def head(title, desc, url, og="og-easyelm.png", ogalt="Easy Elm logo: a green leaf in a white rounded square on green"):
     return f'''<!DOCTYPE html>
@@ -95,9 +95,9 @@ C = lambda n: read(n)
 # Single source for the home cards and /apps.json.
 SITE = "https://www.easyelm.com"
 APP_DATA = [
-    dict(name="Easy Elm Remote", slug="remote", description="Use your Android phone as a mouse and keyboard for your computer.", status="Testing", icon="/assets/logo-160.png", alt="Easy Elm Remote app icon: a white laptop and keyboard on green"),
-    dict(name="Proximity Reminders", slug="reminders", description="Reminders that go off when you arrive at, or drive by, your favorite places.", status="Coming soon", icon="/reminders/icon.png", alt="Proximity Reminders app icon"),
-    dict(name="Easy Elm Intercom", slug="intercom", description="A push-to-talk intercom for the phones in your home or workplace.", status="Coming soon", icon="/intercom/icon.png", alt="Easy Elm Intercom app icon: a microphone with a PUSH button"),
+    dict(name="Phone Mouse by Easy Elm", slug="remote", description="Use your Android phone as a mouse and keyboard for your computer.", status="Testing", icon="/assets/logo-160.png", alt="Phone Mouse by Easy Elm app icon: a white laptop and keyboard on green"),
+    dict(name="Store Reminder by Easy Elm", slug="reminders", description="Reminders that go off when you arrive at, or drive by, your favorite places.", status="Coming soon", icon="/reminders/icon.png", alt="Store Reminder by Easy Elm app icon"),
+    dict(name="Phone Intercom by Easy Elm", slug="intercom", description="A push-to-talk intercom for the phones in your home or workplace.", status="Coming soon", icon="/intercom/icon.png", alt="Phone Intercom by Easy Elm app icon: a microphone with a PUSH button"),
 ]
 def card(a):
     cls = "badge" if a["status"] == "Testing" else "badge badge-soon"
@@ -112,10 +112,10 @@ import json
 json.dump([dict(name=a["name"], slug=a["slug"], description=a["description"], status=a["status"], page=f"{SITE}/{a['slug']}/", icon=SITE + a["icon"]) for a in APP_DATA],
           open(os.path.join(ROOT, "apps.json"), "w"), indent=2, ensure_ascii=False)
 page("index.html","Easy Elm. Helpful apps that stay out of your way.","Easy Elm. Helpful apps that stay out of your way.","/",C("home.html").replace("{{APP_CARDS}}", "\n".join(card(a) for a in APP_DATA)))
-page("remote/index.html","Easy Elm Remote: your phone as a mouse and keyboard","Easy Elm Remote turns your Android phone or tablet into a wireless Bluetooth mouse, keyboard, mic and volume control for your Windows PC, laptop, or Android tablet.","/remote/",C("remote.html"),app="remote",og="og-remote.png",ogalt="Easy Elm Remote app icon: a white laptop and keyboard on green")
-page("reminders/index.html","Proximity Reminders: reminders at the right place","Location reminders that go off when you drive by or arrive at your favorite places.","/reminders/",C("reminders.html"),app="reminders")
-page("intercom/index.html","Easy Elm Intercom: hold a name and talk","A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.","/intercom/",C("intercom.html"),app="intercom")
-page("support/index.html","Support: Easy Elm","Help for Easy Elm Remote, Proximity Reminders and Easy Elm Intercom.","/support/",C("support.html"))
+page("remote/index.html","Phone Mouse by Easy Elm: your phone as a mouse and keyboard","Phone Mouse by Easy Elm turns your Android phone or tablet into a wireless Bluetooth mouse, keyboard, mic and volume control for your Windows PC, laptop, or Android tablet.","/remote/",C("remote.html"),app="remote",og="og-remote.png",ogalt="Phone Mouse by Easy Elm app icon: a white laptop and keyboard on green")
+page("reminders/index.html","Store Reminder by Easy Elm: reminders at the right place","Location reminders that go off when you drive by or arrive at your favorite places.","/reminders/",C("reminders.html"),app="reminders")
+page("intercom/index.html","Phone Intercom by Easy Elm: hold a name and talk","A push-to-talk intercom for the phones in your home or workplace, over your own Wi-Fi.","/intercom/",C("intercom.html"),app="intercom")
+page("support/index.html","Support: Easy Elm","Help for Phone Mouse by Easy Elm, Store Reminder by Easy Elm and Phone Intercom by Easy Elm.","/support/",C("support.html"))
 def demote(h):
     return h.replace("<h2","<h3").replace("</h2>","</h3>").replace("<h1","<h2").replace("</h1>","</h2>")
 pr = {s: C(f"privacy-{s}.html") for s,_ in APPS}
